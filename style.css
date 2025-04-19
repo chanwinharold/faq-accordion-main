@@ -1,4 +1,109 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  background: hsl(0, 100%, 100%) no-repeat top;
+  background-size: contain;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  animation: main-animation 800ms ease-out;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  border-radius: 10px;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: rgba(0, 0, 0, 0.05) 25px 25px 20px 5px, rgba(0, 0, 0, 0.05) -25px 25px 20px 5px;
+  padding: 3rem 2rem;
+  margin-block: 5rem;
+}
+.container__header {
+  display: flex;
+  column-gap: 1rem;
+}
+.container__section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  border-top: 1px solid hsl(275, 100%, 97%);
+}
+.container__section__title {
+  font-size: 1rem;
+}
+.container__section__title:hover {
+  color: hsl(292, 16%, 49%);
+}
+.container__section__button {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: url("assets/images/icon-plus.svg") no-repeat;
+  background-size: cover;
+}
+
+[aria-label="section header"] {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-image: url("assets/images/background-pattern-mobile.svg");
+  }
+  main {
+    max-width: 95vw;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+  main {
+    width: 32rem;
+  }
+}
+@keyframes main-animation {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes display-paragraph {
+  from {
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform-origin: top;
+    transform: scaleY(100%);
+    opacity: 1;
+  }
+}
+.first {
+  border-top: none;
+}
+
 .attribution {
+  display: none;
+  position: absolute;
+  bottom: 0;
   font-size: 11px;
   text-align: center;
 }

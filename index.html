@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
     <meta name="description" content="FAQ accordion">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
 
@@ -14,29 +17,53 @@
 </head>
 <body>
 
-FAQs
+<main class="container">
+    <header class="container__header">
+        <img class="container__header__image" src="assets/images/icon-star.svg" alt="A star">
+        <h1 class="container__header__title">FAQs</h1>
+    </header>
 
-What is Frontend Mentor, and how will it help me?
+    <section class="container__section first">
+        <div aria-label="section header">
+            <h2 id="-1" class="container__section__title">What is Frontend Mentor, and how will it help me?</h2>
+            <button class="container__section__button" aria-controls="paragraph-1" id="1" aria-label="expand"></button>
+        </div>
 
-Frontend Mentor offers realistic coding challenges to help developers improve their
-frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-all levels and ideal for portfolio building.
+        <p id="paragraph-1" class="container__section__paragraph" aria-hidden="true">Frontend Mentor offers realistic coding challenges to help developers improve their
+            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+            all levels and ideal for portfolio building.</p>
+    </section>
 
-Is Frontend Mentor free?
+    <section class="container__section">
+        <div aria-label="section header">
+            <h2 id="-2" class="container__section__title">Is Frontend Mentor free?</h2>
+            <button class="container__section__button" aria-controls="paragraph-2" id="2" aria-label="expand"></button>
+        </div>
 
-Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-option providing access to a range of projects suitable for all skill levels.
+        <p id="paragraph-2" class="container__section__paragraph" aria-hidden="true">Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+            option providing access to a range of projects suitable for all skill levels.</p>
+    </section>
 
-Can I use Frontend Mentor projects in my portfolio?
+    <section class="container__section">
+        <div aria-label="section header">
+            <h2 id="-3" class="container__section__title">Can I use Frontend Mentor projects in my portfolio?</h2>
+            <button class="container__section__button" aria-controls="paragraph-3" id="3" aria-label="expand"></button>
+        </div>
 
-Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-way to showcase your skills to potential employers!
+        <p id="paragraph-3" class="container__section__paragraph" aria-hidden="true">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+            way to showcase your skills to potential employers!</p>
+    </section>
 
-How can I get help if I'm stuck on a Frontend Mentor challenge?
+    <section class="container__section">
+        <div aria-label="section header">
+            <h2 id="-4" class="container__section__title">How can I get help if I'm stuck on a challenge?</h2>
+            <button class="container__section__button" aria-controls="paragraph-4" id="4" aria-label="expand"></button>
+        </div>
 
-The best place to get help is inside Frontend Mentor's Discord community. There's a help
-channel where you can ask questions and seek support from other community members.
-
+        <p id="paragraph-4" class="container__section__paragraph" aria-hidden="true">The best place to get help is inside Frontend Mentor's Discord community. There's a help
+            channel where you can ask questions and seek support from other community members.</p>
+    </section>
+</main>
 
 <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

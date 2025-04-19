@@ -1,4 +1,131 @@
+//Colors
+
+$White: hsl(0, 100%, 100%);
+$Purple-100: hsl(275, 100%, 97%);
+$Purple-600: hsl(292, 16%, 49%);
+$Purple-950: hsl(292, 42%, 14%);
+
+//Typography
+
+//Body Copy
+$fs: 1rem;
+
+//Font
+$ff: 'Work Sans', sans-serif;
+$fw-light: 400;
+$fw-bold: 600;
+$fw-bolder: 700;
+
+$sm: 480px;
+
+*, *::before, *::after  {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $ff;
+    font-size: $fs;
+    background: $White no-repeat top;
+    background-size: contain;
+
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    animation: main-animation 800ms ease-out;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    border-radius: 10px;
+    background-color: $White;
+    box-shadow: rgba(0, 0, 0, 0.05) 25px 25px 20px 5px, rgba(0, 0, 0, 0.05) -25px 25px 20px 5px;
+    padding: 3rem 2rem;
+    margin-block: 5rem;
+
+    &__header {
+        display: flex;
+        column-gap: 1rem;
+    }
+    &__section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        border-top: 1px solid $Purple-100;
+
+        &__title {
+            font-size: $fs;
+
+            &:hover {
+                color: $Purple-600;
+            }
+        }
+        &__button {
+            min-width: 30px;
+            min-height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: url("assets/images/icon-plus.svg") no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+[aria-label='section header'] {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
 
 
-.attribution { font-size: 11px; text-align: center; }
+@media screen and (max-width: $sm) {
+    body {
+        background-image: url("assets/images/background-pattern-mobile.svg");
+    }
+    main {
+        max-width: 95vw;
+    }
+}
+@media screen and (min-width: $sm) {
+    body {
+        background-image: url("assets/images/background-pattern-desktop.svg");
+    }
+    main {
+        width: 32rem;
+    }
+}
+
+@keyframes main-animation {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes display-paragraph {
+    from {
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform-origin: top;
+        transform: scaleY(100%);
+        opacity: 1;
+    }
+}
+
+
+.first { border-top: none; }
+.attribution { display: none; position: absolute; bottom: 0; font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
